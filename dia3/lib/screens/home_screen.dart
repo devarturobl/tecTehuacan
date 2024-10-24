@@ -98,6 +98,23 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                     prefixIcon: Icon(Icons.search, color: Colors.white.withOpacity(0.5),),
                   ),
                 ),
+              ),
+              TabBar(
+                controller: _tabController,
+                tabs: [
+                  Tab(
+                    child: Text("Hot Coffee"),
+                  ),
+                  Tab(
+                    child: Text("Cold Coffee"),
+                  ),
+                  Tab(
+                    child: Text("Cappuiccino"),
+                  ),
+                  Tab(
+                    child: Text("Americano"),
+                  ),
+                ]
               )
             ],
           ),
