@@ -130,7 +130,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                 ]
               ),
               const SizedBox(height: 10),
-              const Center(
+              Center(
                 child: ItemWidget(),
               )
             ],
