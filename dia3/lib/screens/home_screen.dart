@@ -1,3 +1,4 @@
+import 'package:dia3/widgets/items.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -37,17 +38,17 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.only(top: 15.0),
+          padding: const EdgeInsets.only(top: 15.0),
           child: ListView(
             children: [
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 15.0),
+                padding: const EdgeInsets.symmetric(horizontal: 15.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     InkWell(
                       onTap: () {
-                        
+                       print("Soy el Sort");
                       },
                       child: const Icon(
                         Icons.sort_rounded,
@@ -57,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                     ),
                     InkWell(
                       onTap: () {
-                        
+                        print("Soy la notificacion");
                       },
                       child: const Icon(
                         Icons.notifications,
@@ -76,6 +77,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                   color: Colors.white,
                   fontSize: 30.0,
                   fontWeight: FontWeight.w500,
+                  //letterSpacing: 2,
                 ),
                 ),
               ),
@@ -101,7 +103,18 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
               ),
               TabBar(
                 controller: _tabController,
-                tabs: [
+                //Estilo
+                labelColor: Colors.amber,
+                unselectedLabelColor: Colors.white.withOpacity(0.3),
+                isScrollable: true,
+                indicator: UnderlineTabIndicator(
+                  borderSide: BorderSide(
+                    width: 3.0,
+                    color: Colors.amber.withOpacity(0.5)
+                  ),
+                  insets: const EdgeInsets.symmetric(horizontal: 16),
+                ),
+                tabs: const [
                   Tab(
                     child: Text("Hot Coffee"),
                   ),
@@ -115,6 +128,10 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                     child: Text("Americano"),
                   ),
                 ]
+              ),
+              const SizedBox(height: 10),
+              const Center(
+                child: ItemWidget(),
               )
             ],
           ),
