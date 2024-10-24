@@ -32,7 +32,21 @@ class ItemWidget extends StatelessWidget {
                 blurRadius: 5
               )
             ],
-            )
+            ),
+            child: Column(
+              children: [
+                InkWell(
+                  onTap: (){},
+                  child: Container(
+                    margin: const EdgeInsets.all(10),
+                    child: Image.asset("assets/${img[i]}.png",
+                    width: 100,
+                    height: 100,
+                    fit: BoxFit.contain),
+                  ),
+                )
+              ],
+            ),
           ),
           ]
         );
