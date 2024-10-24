@@ -13,19 +13,19 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   Widget build(BuildContext context) {
     return Material(
       child: Container(
-        padding: EdgeInsets.only(top: 100, bottom: 40),
-        decoration: BoxDecoration(
+        padding: const EdgeInsets.only(top: 100, bottom: 40),
+        decoration: const BoxDecoration(
           color: Colors.black,
           image: DecorationImage(
             image: AssetImage("assets/bg.png"),
             fit: BoxFit.cover,
-            opacity: 0.6,
+            opacity: 0.5,
           )
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text("COFFEE SHOP",
+            const Text("COFFEE SHOP",
             style: TextStyle(
               color: Colors.white,
               fontSize: 50.0,
