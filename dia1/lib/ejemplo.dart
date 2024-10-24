@@ -7,9 +7,9 @@ class Page2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text("Flutter Layer Demo"),
+        const Text("Flutter Layer Demo"),
         Image.asset("assets/foto.jpg"),
-        Row(
+        const Row(
           children: [
             Column(
               children: [
@@ -36,25 +36,21 @@ class Page2 extends StatelessWidget {
                     )
                   ],
                 ),
-                Column(
+                const Column(
                   children: [
                     Icon(Icons.route),
-                    Container(
-                      child: Text("ROUTE"),
-                    )
+                    Text("ROUTE"),
                   ],
                 ),
-                Column(
+                const Column(
                   children: [
                     Icon(Icons.share),
-                    Container(
-                      child: Text("SHARE"),
-                    )
+                    Text("SHARE"),
                   ],
                 )
               ],
             ),
-            Text("En las alturas majestuosas de la montaña, donde el viento susurra entre los picos nevados y las nubes rozan suavemente las cimas, la naturaleza revela su grandeza. Rocas milenarias emergen con fuerza, talladas por el tiempo y los elementos, mientras los valles verdes se extienden como un manto que nutre la vida salvaje. La tranquilidad domina, interrumpida solo por el eco de las águilas que surcan el cielo y los riachuelos cristalinos que serpentean entre los peñascos. Es en este santuario de la tierra donde el alma encuentra paz y el espíritu, inspiración.")
+            const Text("En las alturas majestuosas de la montaña, donde el viento susurra entre los picos nevados y las nubes rozan suavemente las cimas, la naturaleza revela su grandeza. Rocas milenarias emergen con fuerza, talladas por el tiempo y los elementos, mientras los valles verdes se extienden como un manto que nutre la vida salvaje. La tranquilidad domina, interrumpida solo por el eco de las águilas que surcan el cielo y los riachuelos cristalinos que serpentean entre los peñascos. Es en este santuario de la tierra donde el alma encuentra paz y el espíritu, inspiración.")
       ],
     );
   }
