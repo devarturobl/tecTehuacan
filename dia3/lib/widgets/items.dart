@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ItemWidget extends StatelessWidget {
@@ -9,12 +10,6 @@ class ItemWidget extends StatelessWidget {
       'price': 88.00,
       'description': 'El Café Latte es una bebida suave y cremosa, ideal para quienes buscan un sabor balanceado entre el espresso y la leche vaporizada. Se prepara con una base de espresso que se mezcla con leche espumosa, creando una textura aterciopelada y un sabor suave, con la opción de personalizarlo con azúcar o jarabes saborizados. Es perfecto para un momento de relajación o para acompañar cualquier momento del día.',
       'volumen': '200ml'
-    },
-    {
-      'name': 'Espresso',
-      'price': 30.00,
-      'description': 'El Espresso es la esencia del café en su forma más pura y concentrada. Preparado con agua caliente que pasa a alta presión a través de café finamente molido, resulta en una pequeña porción de bebida intensa y aromática, con un sabor robusto y una capa de crema dorada en la superficie. Perfecto para los amantes del café que buscan una experiencia fuerte y auténtica, el espresso también es la base de otras bebidas como el cappuccino y el latte.',
-      'volumen': '100ml'
     },
     {
       'name': 'Espresso',
@@ -103,6 +98,17 @@ class ItemWidget extends StatelessWidget {
                       fontSize: 18,
                       fontWeight: FontWeight.bold
                     ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                        color: Colors.red,
+                        borderRadius: BorderRadius.circular(20)
+                      ),
+                      child: Icon(
+                        CupertinoIcons.add,
+                        size: 20,
+                      ),
                     )
                   ],
                 ),

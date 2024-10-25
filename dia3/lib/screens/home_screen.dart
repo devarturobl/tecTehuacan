@@ -1,3 +1,4 @@
+import 'package:dia3/widgets/home_botton_bar.dart';
 import 'package:dia3/widgets/items.dart';
 import 'package:flutter/material.dart';
 
@@ -137,6 +138,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
           ),
         ),
       ),
+      bottomNavigationBar: HomeBottonBar(),
     );
   }
 }
