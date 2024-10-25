@@ -4,10 +4,36 @@ class ItemWidget extends StatelessWidget {
   ItemWidget({super.key});
 
   List img = [
-    'Latte',
-    'Espresso',
-    'Black Coffee',
-    'Cold Coffee'
+    {
+      'name': 'Latte',
+      'price': 88.00,
+      'description': 'El Café Latte es una bebida suave y cremosa, ideal para quienes buscan un sabor balanceado entre el espresso y la leche vaporizada. Se prepara con una base de espresso que se mezcla con leche espumosa, creando una textura aterciopelada y un sabor suave, con la opción de personalizarlo con azúcar o jarabes saborizados. Es perfecto para un momento de relajación o para acompañar cualquier momento del día.',
+      'volumen': '200ml'
+    },
+    {
+      'name': 'Espresso',
+      'price': 30.00,
+      'description': 'El Espresso es la esencia del café en su forma más pura y concentrada. Preparado con agua caliente que pasa a alta presión a través de café finamente molido, resulta en una pequeña porción de bebida intensa y aromática, con un sabor robusto y una capa de crema dorada en la superficie. Perfecto para los amantes del café que buscan una experiencia fuerte y auténtica, el espresso también es la base de otras bebidas como el cappuccino y el latte.',
+      'volumen': '100ml'
+    },
+    {
+      'name': 'Espresso',
+      'price': 30.00,
+      'description': 'El Espresso es la esencia del café en su forma más pura y concentrada. Preparado con agua caliente que pasa a alta presión a través de café finamente molido, resulta en una pequeña porción de bebida intensa y aromática, con un sabor robusto y una capa de crema dorada en la superficie. Perfecto para los amantes del café que buscan una experiencia fuerte y auténtica, el espresso también es la base de otras bebidas como el cappuccino y el latte.',
+      'volumen': '100ml'
+    },
+    {
+      'name': 'Black Coffee',
+      'price': 20.00,
+      'description': 'El Black Coffee, o café negro, es la forma más sencilla de disfrutar el café en su estado puro. Preparado solo con agua caliente y granos de café recién molidos, ofrece un sabor pleno y natural, resaltando todos los matices y notas de los granos sin agregar leche ni azúcar. Es perfecto para quienes buscan una experiencia auténtica y directa del café, con su cuerpo ligero y aroma profundo, ideal para disfrutar a cualquier hora del día.',
+      'volumen': '80ml'
+    },
+    {
+      'name': 'Cold Coffee',
+      'price': 90.00,
+      'description': 'El Cold Coffee es una refrescante opción para los amantes del café en días calurosos. Este café se prepara enfriándolo después de la extracción o elaborándolo directamente en frío, resaltando sabores suaves y reduciendo la acidez. Puede servirse solo, con hielo, o combinado con leche, cremas y saborizantes, ofreciendo una experiencia suave y revitalizante. Perfecto para disfrutar de la esencia del café con un toque refrescante, es ideal para energizarte y refrescarte al mismo tiempo.',
+      'volumen': '300ml'
+    },
   ];
 
   @override
@@ -39,12 +65,13 @@ class ItemWidget extends StatelessWidget {
                   onTap: (){},
                   child: Container(
                     margin: const EdgeInsets.all(10),
-                    child: Image.asset("assets/${img[i]}.png",
+                    child: Image.asset("assets/${img[i]['name']}.png",
                     width: 100,
                     height: 100,
                     fit: BoxFit.contain),
                   ),
-                )
+                ),
+
               ],
             ),
           ),
