@@ -93,11 +93,11 @@ class ItemWidget extends StatelessWidget {
           padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
           margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 13.0),
           decoration: BoxDecoration(
-            color: Color.fromARGB(255, 228, 179, 32),
+            color: Colors.black87,
             borderRadius: BorderRadius.circular(30),
             boxShadow: [
               BoxShadow(
-                color: Colors.white.withOpacity(0.5),
+                color: Colors.white.withOpacity(0.2),
                 spreadRadius: 4,
                 blurRadius: 5
               )
