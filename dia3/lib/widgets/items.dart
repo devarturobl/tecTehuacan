@@ -49,7 +49,7 @@ class ItemWidget extends StatelessWidget {
           padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
           margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 13.0),
           decoration: BoxDecoration(
-            color: Colors.amber,
+            color: Color.fromARGB(255, 228, 179, 32),
             borderRadius: BorderRadius.circular(30),
             boxShadow: [
               BoxShadow(
@@ -60,6 +60,7 @@ class ItemWidget extends StatelessWidget {
             ],
             ),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 InkWell(
                   onTap: (){},
@@ -71,7 +72,41 @@ class ItemWidget extends StatelessWidget {
                     fit: BoxFit.contain),
                   ),
                 ),
-
+                Padding(
+                  padding: EdgeInsets.only(bottom: 8),
+                  child: Container(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(img[i]['name'],
+                        style: TextStyle(
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.bold
+                        ),
+                        ),
+                        Text("Best Coffee",
+                        style: TextStyle(
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.bold
+                        ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Padding(padding: EdgeInsets.symmetric(vertical: 3),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text('\$${double.parse(img[i]['price'].toString()).toStringAsFixed(2)}',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold
+                    ),
+                    )
+                  ],
+                ),
+                )
               ],
             ),
           ),
